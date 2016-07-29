@@ -1,4 +1,4 @@
-# NYPL New Footer Codebase
+# NYPL Global Footer
 
 This repository is the codebase to set new Footer on NYPL's landing pages.
 
