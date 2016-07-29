@@ -1,3 +1,43 @@
+// ==================================================
+// Media Query Mixin: Breakpoint(args)
+// supports mobile first approach as well as non-mobile
+// first; utilize constraints.
+// ==================================================
+
+// Constraints:
+$min: min-width;
+$max: max-width;
+
+/*
+** Usage:
+** @include breakpoint($min, $tablet) {...}
+** OR
+** @include breakpoint($max, $desktop) {...}
+** OR
+** @include breakpoint(null, $palm, $tablet) {...}
+*/
+@mixin breakpoint($constraint, $viewport1, $viewport2: null) {
+
+  @if $constraint == $min {
+
+    @media screen and ($min: $viewport1) {
+      @content;
+    }
+  }
+  @else if $constraint == $max {
+
+    @media screen and ($max: $viewport1) {
+      @content;
+    }
+  }
+  @else {
+
+    @media screen and ($min: $viewport1) and ($max: $viewport2) {
+      @content;
+    }
+  }
+}
+
 /*
 ** Footer Styles
 **
