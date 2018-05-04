@@ -1,86 +1,15 @@
-// ==================================================
-// Media Query Mixin: Breakpoint(args)
-// supports mobile first approach as well as non-mobile
-// first; utilize constraints.
-// ==================================================
+@import 'globals';
+@import 'mixins';
+@import 'viewports';
+@import 'fonts';
 
-// Constraints:
-$min: min-width;
-$max: max-width;
+$footer-color: #54514A;
 
-/*
-** Usage:
-** @include breakpoint($min, $tablet) {...}
-** OR
-** @include breakpoint($max, $desktop) {...}
-** OR
-** @include breakpoint(null, $palm, $tablet) {...}
-*/
-@mixin breakpoint($constraint, $viewport1, $viewport2: null) {
-
-  @if $constraint == $min {
-
-    @media screen and ($min: $viewport1) {
-      @content;
-    }
-  }
-  @else if $constraint == $max {
-
-    @media screen and ($max: $viewport1) {
-      @content;
-    }
-  }
-  @else {
-
-    @media screen and ($min: $viewport1) and ($max: $viewport2) {
-      @content;
-    }
-  }
-}
-
-/*
-** Footer Styles
-**
-**/
-
-/*variables for Footer*/
-$small: 320px;
-$portrait: 768px;
-$landscape: 1024px;
-$large: 1500px;
-
-/* VISUALLY HIDE ELEMENTS
- * ---------------------
- * Usage: Visually hides an element from the screen
- * but is still readable by screen readers for accessibility.
-*/
-@mixin visuallyHidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
-/* DISPLAY VISUALLY HIDDEN ELEMENTS
- * ---------------------
- * Usage: Displays an element that is visually hidden.
-*/
-@mixin displayVisuallyHidden {
-  position: relative;
-  left: 0;
-  height: auto;
-  width: 100%;
-}
-
-footer {
-  box-sizing: content-box;
+.footer {
   padding: 15px 20px 100px;
-  background: #54514A;
+  background: $footer-color;
   color: #fff;
   font-family: "Kievit-Medium";
-  height: 310px;
   min-height: 280px;
   position: relative;
   clear: both;
@@ -91,7 +20,6 @@ footer {
     text-decoration: none;
 
     &:hover {
-      color: #fff;
       text-decoration: underline;
     }
   }
@@ -103,20 +31,20 @@ footer {
     top: 15px;
     left: 15px;
 
-    @include breakpoint($min, $portrait) {
+    @include min-screen($portrait) {
       font-size: 75px;
       top: 15px;
       left: 15%;
     }
 
-    @include breakpoint($min, $landscape) {
+    @include min-screen($landscape) {
       font-size: 80px;
       left: 13%;
       top: 30px;
     }
   }
 
-  .footer-content {
+  &-content {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -132,12 +60,11 @@ footer {
       text-align: right;
       width: 100%;
 
-      @include breakpoint($min, $portrait) {
+      @include min-screen($portrait) {
         width: auto;
       }
 
       .linkItemList {
-        margin: 0;
         li {
           @include visuallyHidden;
 
@@ -145,7 +72,7 @@ footer {
             @include displayVisuallyHidden;
           }
 
-          @include breakpoint($min, $portrait) {
+          @include min-screen($portrait) {
             @include displayVisuallyHidden;
           }
         }
@@ -156,8 +83,7 @@ footer {
       }
 
       li {
-       @include breakpoint($min, $portrait) {
-
+        @include min-screen($portrait) {
           float: left;
           width: 135px;
 
@@ -166,7 +92,7 @@ footer {
           }
         }
 
-       @include breakpoint($min, $landscape) {
+        @include min-screen($landscape) {
           width: 155px;
 
           &:first-child {
@@ -178,7 +104,7 @@ footer {
           }
         }
 
-        @include breakpoint($min, $large) {
+        @include min-screen($large) {
           &:first-child,
           &:nth-child(2) {
             width: 155px;
@@ -188,7 +114,7 @@ footer {
       }
 
       // MQs for .footerLinks
-      @include breakpoint($min, $portrait) {
+      @include min-screen($portrait) {
         order: 1;
         margin: 0;
         font-size: 13px;
@@ -196,13 +122,13 @@ footer {
         text-align: left;
       }
 
-      @include breakpoint($min, $landscape) {
+      @include min-screen($landscape) {
         font-size: 14px;
         font-weight: 400;
         line-height: 30px;
       }
 
-     @include breakpoint($min, $large) {
+      @include min-screen($large) {
         margin-right: 70px;
         order: 2;
       }
@@ -238,7 +164,7 @@ footer {
             width: 1px;
           }
 
-          @include breakpoint($min, $portrait) {
+          @include min-screen($portrait) {
             font-size: 50px;
           }
         }
@@ -256,23 +182,23 @@ footer {
       }
 
       // MQs for .socialMedia
-      @include breakpoint($min, $portrait) {
+      @include min-screen($portrait) {
         width: 170px;
         margin-top: 30px;
       }
 
-      @include breakpoint($min, $landscape) {
+      @include min-screen($landscape) {
         margin-top: 30px;
       }
 
-      @include breakpoint($min, $large) {
+      @include min-screen($large) {
         margin-top: 0;
         width: 280px;
       }
     }
 
     // MQs for &-content
-    @include breakpoint($min, $portrait) {
+    @include min-screen($portrait) {
       flex-direction: column;
       margin-top: 0;
       margin: 0;
@@ -281,11 +207,11 @@ footer {
       align-items: flex-end;
     }
 
-    @include breakpoint($min, $landscape) {
+    @include min-screen($landscape) {
       left: 35%;
     }
 
-    @include breakpoint($min, $large) {
+    @include min-screen($large) {
       flex-direction: row-reverse;
       align-items: flex-start;
     }
@@ -297,7 +223,7 @@ footer {
     font-family: "Kievit-Book";
     text-align: right;
 
-    @include breakpoint($min, $portrait) {
+    @include min-screen($portrait) {
       font-size: 20px;
       position: absolute;
       left: 15%;
@@ -305,7 +231,7 @@ footer {
       font-size: 11px;
     }
 
-    @include breakpoint($min, $landscape) {
+    @include min-screen($landscape) {
       left: 13%;
       top: 140px;
       font-size: 13px;
@@ -313,11 +239,11 @@ footer {
   }
 
   // MQs for .footer
-  @include breakpoint($min, $portrait) {
+  @include min-screen($portrait) {
     padding: 15px 0;
   }
 
-  @include breakpoint($min, $landscape) {
+  @include min-screen($landscape) {
     padding: 30px 0;
   }
 }

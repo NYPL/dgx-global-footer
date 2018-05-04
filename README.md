@@ -1,22 +1,25 @@
 # NYPL Global Footer
 
-This repository is the codebase to set new Footer on NYPL's landing pages.
+Static HTML and CSS files for adding the New York Public Library's footer to your app.
 
 ### Version
+1.0.0
 
+### Usage
+Copy the static HTML in `footer.html` and the CSS in `build/footer.css` and add it to your project.
 
-### Installation
-No install needed. Just run python simple http server.
+### Build
+The SCSS is copying over from [dgx-react-footer](https://bitbucket.org/NYPL/dgx-react-footer/src/master/). Feel free to use that if you'd like to get the source styles and related methods.
+
+You can update the SCSS and compile new CSS by running `make` at the top level of this repository. This assumes you already have sass installed on your machine.
+
+### Demos
+To run the repo locally, run a python simple http server:
 ```sh
 $ python -m SimpleHTTPServer 8000
 ```
 
-### Usage
-Copy all the contents in footer.html and the styles in _footer.scss, and put in the codebase of landing pages.
+A [demo CodePen](https://codepen.io/edwinguzman/pen/qYXzPx) is also available.
 
-Be careful of line 48 in footer.html. There's a js code to automatically generate current year.
-It might need to put in proper place based on the structure of landing pages.
-
-Contributors
-----
+### Contributors
 NYPL Digital Experience
