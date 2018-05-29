@@ -1,6 +1,6 @@
 # Changelog
 
-### v1.0.1
+### v1.0.2
 > Removing unnecessary font icon css and updating font icons to svg icons.
 
 ### v1.0.0
