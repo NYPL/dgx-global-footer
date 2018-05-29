@@ -19,7 +19,7 @@ To run the repo locally, run a python simple http server:
 $ python -m SimpleHTTPServer 8000
 ```
 
-A [demo CodePen](https://codepen.io/edwinguzman/pen/qYXzPx) is also available.
+A [demo CodePen](https://codepen.io/edwinguzman/pen/pKoWxq) is also available.
 
 ### Contributors
 NYPL Digital Experience
