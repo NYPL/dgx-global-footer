@@ -3,7 +3,7 @@
 Static HTML and CSS files for adding the New York Public Library's footer to your app.
 
 ### Version
-1.0.1
+1.0.2
 
 ### Usage
 Copy the static HTML in `footer.html` and the CSS in `build/footer.css` and add it to your project.
@@ -19,7 +19,7 @@ To run the repo locally, run a python simple http server:
 $ python -m SimpleHTTPServer 8000
 ```
 
-A [demo CodePen](https://codepen.io/edwinguzman/pen/qYXzPx) is also available.
+A [demo CodePen](https://codepen.io/edwinguzman/pen/pKoWxq) is also available.
 
 ### Contributors
 NYPL Digital Experience
