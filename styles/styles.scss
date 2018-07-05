@@ -3,6 +3,7 @@
 @import 'viewports';
 @import 'fonts';
 
+$nypl-white: #FFF;
 $footer-color: #54514A;
 
 .footer {
@@ -16,16 +17,21 @@ $footer-color: #54514A;
 
   a {
     font-weight: 300;
-    color: #fff;
+    color: $nypl-white;
     text-decoration: none;
 
     &:hover {
       text-decoration: underline;
     }
+
+    &:focus {
+      background-color: $footer-color;
+      outline: solid 2px $nypl-white;
+     }
   }
 
   .svgIcon {
-    fill: #fff;
+    fill: $nypl-white;
   }
 
   .logoText {

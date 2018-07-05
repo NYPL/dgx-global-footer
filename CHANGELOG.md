@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.0.3
+> Updated the `:focus` styles
+
 ### v1.0.2
 > Removing unnecessary font icon css and updating font icons to svg icons.
 
