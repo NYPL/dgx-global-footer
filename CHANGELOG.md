@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.0.4
+> Updating SVGs to include focusable="false".
+
 ### v1.0.3
 > Updated the `:focus` styles
 

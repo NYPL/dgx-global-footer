@@ -3,7 +3,7 @@
 Static HTML and CSS files for adding the New York Public Library's footer to your app.
 
 ### Version
-1.0.3
+1.0.4
 
 ### Usage
 Copy the static HTML in `footer.html` and the CSS in `build/footer.css` and add it to your project.
