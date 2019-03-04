@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.0.5
+> Adding non-profit status and EIN information.
+
 ### v1.0.4
 > Updating SVGs to include focusable="false".
 
