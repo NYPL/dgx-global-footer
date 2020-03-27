@@ -1,5 +1,9 @@
 # Changelog
 
+### v1.0.6
+- Removed Tumblr icon, as the account in no longer maintained.
+- Removed Kievit font, to reduce license usage.
+
 ### v1.0.5
 > Adding non-profit status and EIN information.
 
