@@ -1,5 +1,8 @@
 # Changelog
 
+### v1.0.7
+- Added system-font-css.
+
 ### v1.0.6
 - Removed Tumblr icon, as the account in no longer maintained.
 - Removed Kievit font, to reduce license usage.
