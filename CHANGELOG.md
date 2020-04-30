@@ -1,5 +1,11 @@
 # Changelog
 
+### v1.0.8
+- Update to Youtube icon to match branding guidelines.
+- Widened width constraint on social media icons to avoid wrapping.
+- Adjusted system-ui font stack to account for Firefox v.75.
+- Updated Makefile syntax to work with npm version of sass.
+
 ### v1.0.7
 - Added system-font-css.
 
