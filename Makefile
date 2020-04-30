@@ -1,4 +1,4 @@
-SASS = sass --style compressed --sourcemap=none
+SASS = sass --style compressed --no-source-map
 
 STYLES = styles
 BUILD = build
