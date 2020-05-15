@@ -11,7 +11,7 @@ $footer-color: #54514A;
   background: $footer-color;
   color: #fff;
   font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-  min-height: 280px;
+  min-height: 360px;
   position: relative;
   clear: both;
 
@@ -228,24 +228,46 @@ $footer-color: #54514A;
     }
   }
 
-  .copyright {
-    margin: 35px 0 0 0;
-    font-size: 12px;
-    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
-    text-align: right;
+  &-content--secondary {
 
     @include min-screen($portrait) {
-      font-size: 20px;
       position: absolute;
       left: 15%;
-      top: 110px;
-      font-size: 11px;
+      top: 140px;
+      width: 400px;
     }
 
     @include min-screen($landscape) {
       left: 13%;
+      top: 170px;
+    }
+
+    @include min-screen($large) {
+      left: 11%;
       top: 140px;
-      font-size: 13px;
+      width: 500px;
+    }
+    
+    .facade {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    
+    .copyright {
+      margin: 35px 0 0 0;
+      font-size: 12px;
+      font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+      text-align: right;
+
+      @include min-screen($portrait) {
+        font-size: 11px;
+      }
+
+      @include min-screen($landscape) {
+        font-size: 13px;
+      }
     }
   }
 
