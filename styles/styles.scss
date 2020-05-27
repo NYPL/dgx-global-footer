@@ -52,10 +52,6 @@ $footer-color: #54514A;
     @include min-screen($landscape) {
       top: 35px;
     }
-
-    @include min-screen($large) {
-      left: 6%;
-    }
   }
 
   &-content {
@@ -232,7 +228,6 @@ $footer-color: #54514A;
     }
 
     @include min-screen($large) {
-      left: 6%;
       top: 140px;
     }
     
