@@ -1,5 +1,9 @@
 # Changelog
 
+### v1.0.9
+- Updating to use NYPL "text-only" svg logo.
+- Adding SASB building facade image.
+
 ### v1.0.8
 - Update to Youtube icon to match branding guidelines.
 - Widened width constraint on social media icons to avoid wrapping.

@@ -38,29 +38,24 @@ $footer-color: #54514A;
   .logoText {
     position: absolute;
     top: 20px;
-    left: -105px;
 
-    .nyplLionLogo {
-      height: 120px;
-      width: 250px;
-
-      &-lion {
-        display: none;
-      }
+    .nyplTextLogo {
+      height: 94px;
+      width: 115px;
     }
 
     @include min-screen($portrait) {
       top: 20px;
-      left: 1%;
+      left: 5%;
     }
 
     @include min-screen($landscape) {
-      left: 4.5%;
+      left: 13%;
       top: 35px;
     }
 
     @include min-screen($large) {
-      left: 5%;
+      left: 11%;
     }
   }
 
@@ -232,7 +227,7 @@ $footer-color: #54514A;
 
     @include min-screen($portrait) {
       position: absolute;
-      left: 15%;
+      left: 5%;
       top: 140px;
       width: 400px;
     }
