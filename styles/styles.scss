@@ -67,6 +67,7 @@ $footer-color: #54514A;
       padding: 0;
       order: 2;
       list-style: none;
+      list-style-type: none;
       text-align: right;
       width: 100%;
 
@@ -75,6 +76,7 @@ $footer-color: #54514A;
       }
 
       .linkItemList {
+        list-style-type: none;
         li {
           @include visuallyHidden;
 
